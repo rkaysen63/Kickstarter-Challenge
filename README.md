@@ -21,7 +21,7 @@ The purpose of this analysis is to determine if there are relationships between 
 ### Analysis of Outcomes Based on Launch Date
 First the data had to be converted into a readable format and before it was organized.  The UNIX time stamps were converted to a readable day-month-year format by a formula that converted the time stamp from seconds into days and that added that time in days to the date 1 January 1970 using Excel's *DATE* function.  For the purpose of sorting by year, an additional column was created to pull just the year from the launch date by using Excel's *YEAR* function.
 
-Then the Kickstarter crowdfunding data was organized by a pivot table in order to count number of each type of outcome (successful, failed and cancelled) by month.  The table was set up to filter Parent Category and Years.  For Louise's purposes, only Theater campaigns were relevant, and therefore, the Parent Category was filtered to Theater but all years of the data were included in the final data set. https://github.com/rkaysen63/Kickstarter-Challenge/commit/1eb56ceffa173b78d0a0b3a03c00da9e9452cd09
+Then the Kickstarter crowdfunding data was organized by a pivot table in order to count number of each type of outcome (successful, failed and cancelled) by month.  The table was set up to filter Parent Category and Years.  For Louise's purposes, only Theater campaigns were relevant, and therefore, the Parent Category was filtered to Theater but all years of the data were included in the final data set. ![alt text](https://github.com/rkaysen63/Kickstarter-Challenge/commit/1eb56ceffa173b78d0a0b3a03c00da9e9452cd09)
 
 
 ### Analysis of Outcomes Based on Goals

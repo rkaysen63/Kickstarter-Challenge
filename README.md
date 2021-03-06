@@ -1,8 +1,8 @@
 # Kickstarting with Excel
 
 ## Table of Contents
-* [Overview of Project](https://github.com/rkaysen63/Kickstarter-Challenge/blob/main/README.md#overview of project)
-* [Analysis and Challenges](https://github.com/rkaysen63/Kickstarter-Challenge/blob/main/README.md#analysis and challenges)
+* [Overview of Project](https://github.com/rkaysen63/Kickstarter-Challenge/blob/main/README.md#overview-of-project)
+* [Analysis and Challenges](https://github.com/rkaysen63/Kickstarter-Challenge/blob/main/README.md#analysis-and-challenges)
 * [Results](https://github.com/rkaysen63/Kickstarter-Challenge/blob/main/README.md#results)
 
 ## Overview of Project

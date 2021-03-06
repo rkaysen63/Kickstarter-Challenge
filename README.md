@@ -2,6 +2,8 @@
 
 ## Table of Contents
 * [Overview of Project](https://github.com/rkaysen63/Kickstarter-Challenge/blob/main/README.md#overview)
+* [Analysis and Challenges](https://github.com/rkaysen63/Kickstarter-Challenge/blob/main/README.md#analysis)
+* [Results](https://github.com/rkaysen63/Kickstarter-Challenge/blob/main/README.md#results)
 
 ## Overview of Project
 

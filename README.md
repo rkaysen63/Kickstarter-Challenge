@@ -1,6 +1,7 @@
 # Kickstarting with Excel
 
 ## Table of Contents
+* [Overview of Project](https://github.com/rkaysen63/Kickstarter-Challenge/blob/main/README.md#overview)
 
 ## Overview of Project
 

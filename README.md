@@ -19,12 +19,17 @@ The purpose of this analysis is to determine if there are relationships between 
 ## Analysis and Challenges
 
 ### Analysis of Outcomes Based on Launch Date
+
 First the data had to be converted into a readable format and before it was organized.  The UNIX time stamps were converted to a readable day-month-year format by a formula that converted the time stamp from seconds into days and that added that time in days to the date 1 January 1970 using Excel's *DATE* function.  For the purpose of sorting by year, an additional column was created to pull just the year from the launch date by using Excel's *YEAR* function.
 
-Then the Kickstarter crowdfunding data was organized by a pivot table in order to count number of each type of outcome (successful, failed and cancelled) by month.  The table was set up to filter Parent Category and Years.  For Louise's purposes, only Theater campaigns were relevant, and therefore, the Parent Category was filtered to Theater but all years of the data were included in the final data set. ![alt text](https://github.com/rkaysen63/Kickstarter-Challenge/commit/1eb56ceffa173b78d0a0b3a03c00da9e9452cd09)
-
+The Kickstarter crowdfunding data was organized by a pivot table in order to count number of each type of outcome (successful, failed and cancelled) by month.  The table was set up to filter Parent Category and Years.  For Louise's purposes, only Theater campaigns were relevant, and therefore, the Parent Category was filtered to Theater but all years of the data were included in the final data set. ![alt text](Resources/Theater_Outcomes_vs_Launch.png)
 
 ### Analysis of Outcomes Based on Goals
+
+For this analysis, dollar-amount ranges were set up for the fundraising goals, e.g. "Less than $1000," "$1000 to $4999", $5000 to $9999, etc.  Then the *COUNTIFS* function was used to determine for each dollar-amount goal range, the number campaigns of a particular outcome (successful, failed, cancelled).
+
+![alt text](Resources/Outcomes_vs_Goals.png)
+
 
 ### Challenges and Difficulties Encountered
 

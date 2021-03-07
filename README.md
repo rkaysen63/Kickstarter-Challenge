@@ -23,24 +23,30 @@ The purpose of this analysis is to determine if there are relationships between 
 * In order to analyze outcomes based on launch date, the Unix timestamp data had to be converted into a readable day-month-year format.  First the UNIX timestamps in seconds were converted into days (60 secs/min, 60 secs/hour, 24 hours/day) and added to the date 1 January 1970 using Excel's *DATE* function.  (Bootcamp Module 1,3.3)
 
 > >Formula for launch date conversion:  =(((*CELL W UNIX DATE STAMP*/60)/60)/24)+DATE(1970,1,1)
-> >
-> >e.g. 
-> >Timestamp in cell J84 is 1429722209.  
+
+> >e.g. Timestamp in CELL J84 is 1429722209. 
+
 > >Date =(((J84/60)/60)/24)+DATE(1970,1,1) = 4/22/2015
 
 * For the purpose of sorting by year, an additional column was created to pull just the year from the launch date by using Excel's *YEAR* function.
 
 > >Formula to pull years:  Year =YEAR(*CELL W LAUNCH DATE IN DAY-MONTH-YEAR FORMAT*)
-> >
-> >e.g.
-> >Date in cell S84 is 4/22/2015.
+
+> >e.g.  Date in CELL S84 is 4/22/2015.
+
 > >Year =YEAR(S84) = 2015
 
-* The Kickstarter crowdfunding data was organized by a pivot table in order to count the number of each type of outcome (successful, failed and cancelled) by month.  The table was set up to filter Parent Category and Years.  For Louise's purposes, only Theater campaigns were relevant, and therefore, the Parent Category was filtered to Theater but all years of the data were included in the final data set. ![alt text](Resources/Theater_Outcomes_vs_Launch.png)
+* The Kickstarter crowdfunding data was organized by a pivot table in order to count the number of each type of outcome (successful, failed and cancelled) by month.  "Outcomes" were placed in the columns of the table and "Date Created Conversion" (i.e. Launch Dates) were place in the rows.  The table was set up to filter Parent Category and Years.  For Louise's purposes, only Theater campaigns were relevant, and therefore, the Parent Category was filtered to Theater but all years of the data were included in the final data set. ![alt text](Resources/Theater_Outcomes_vs_Launch.png)
 
 ### Analysis of Outcomes Based on Goals
 
-For this analysis, dollar-amount ranges were set up for the fundraising goals, e.g. "Less than $1000," "$1000 to $4999", $5000 to $9999, etc.  Then the *COUNTIFS* function was used to determine for each dollar-amount goal range, the number campaigns of a particular outcome (successful, failed, cancelled).
+For this analysis, a table was constructed in which the rows were dollar-amount ranges of fundraising goals, e.g. "Less than $1000," "$1000 to $4999", $5000 to $9999, etc.  The columns were labeled, "Number of Successful", "Number of Failed", "Number of Cancelled", "Total Projects", "Pecentage Successful", Percentage Failed", "Percentage Cancelled." 
+
+* The *COUNTIFS* function was used to determine for each dollar-amount goal range, the number campaigns of a particular outcome (successful, failed, cancelled).  Since Louise was only interested in the outcomes of plays, "plays" were figured into the formula.
+
+> >Formula to count successful outcomes of the campaigns for plays in the goal range of $5000 to $9999: =COUNTIFS(outcomes,"successful",goal,">=5000",goal,"<10000",Subcategory,"plays"), where outcomes=Kickstarter!$F:$F; goal=Kickstarter!$D:$D; Subcategory=Kickstarter!$R:$R.
+> >
+> > E.G. 
 
 ![alt text](Resources/Outcomes_vs_Goals.png)
 

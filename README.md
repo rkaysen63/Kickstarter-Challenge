@@ -76,7 +76,7 @@ For this analysis, a table was constructed on a separate worksheet in which each
 
 ### Results of Analysis of Outcomes Based on Launch Date
 
-*Theater Outcomes Based on Launch Date* visually shows that May appears to be the best month to launch a successful campaign and December is the worst month to launch a successful campaign.   But, I wondered, "Is that because May is a better month to launch a crowdfunding campaigns than December or are there more successful campaigns launched in May than December because there are more total campaigns launched in May (166 total campaigns) than in December (75 total campaigns)?" See ![Additional Tables Outcomes Based on Launch Date](https://github.com/rkaysen63/Kickstarter-Challenge/blob/main/README.md#Additional-Tables-Outcomes-Based-on-Launch Date) for further discussion. 
+*Theater Outcomes Based on Launch Date* visually shows that May appears to be the best month to launch a successful campaign and December is the worst month to launch a successful campaign.   But, I wondered, "Is that because May is a better month to launch a crowdfunding campaigns than December or are there more successful campaigns launched in May than December because there are more total campaigns launched in May (166 total campaigns) than in December (75 total campaigns)?" See ![Additional Tables Outcomes Based on Launch Date](https://github.com/rkaysen63/Kickstarter-Challenge/blob/main/README.md#Additional-Tables-Outcomes-Based-on-Launch-Date) for further discussion. 
 
 ### Results of Analysis of Outcomes Based on Goals
 

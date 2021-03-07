@@ -22,22 +22,16 @@ This project intends to analyze the relationships described above and identify t
 
 ### Analysis of Outcomes Based on Launch Date
 
-* In order to analyze outcomes based on launch date, the Unix timestamp data had to be converted into a readable day-month-year format.  UNIX timestamps in seconds were converted into days (60 secs/min, 60 secs/hour, 24 hours/day) and added to the date 1 January 1970 using Excel's *DATE* function.  (Bootcamp Module 1,3.3)
+* In order to analyze outcomes based on launch date, the Unix timestamp data had to be converted into a readable day-month-year format.  UNIX timestamps in seconds were converted into days (60 secs/min, 60 secs/hour, 24 hours/day) and added to the date 1 January 1970 using Excel's `DATE` function.  (Bootcamp Module 1,3.3)
 
-> >Formula for launch date conversion:  
+> >Formula for launch date conversion into a new cell:  
 > >`=(((*CELL W UNIX DATE STAMP*/60)/60)/24)+DATE(1970,1,1)`
 
-> >e.g. Timestamp in CELL J84 is 1429722209. 
+> >e.g. if CELL J84 has the value 1429722209, the new cell will formula will be `=(((J84/60)/60)/24)+DATE(1970,1,1)` and the cell will display the date 4/22/2015.
 
-> >Date =(((J84/60)/60)/24)+DATE(1970,1,1) = 4/22/2015
+* For the purpose of sorting by year, an additional column was created to pull just the year from the launch date by using Excel's `YEAR` function.
 
-* For the purpose of sorting by year, an additional column was created to pull just the year from the launch date by using Excel's *YEAR* function.
-
-> >Formula to pull year:  Year =YEAR(*CELL W LAUNCH DATE IN DAY-MONTH-YEAR FORMAT*)
-
-> >e.g.  Date in CELL S84 is 4/22/2015.
-
-> >Year =YEAR(S84) = 2015
+> >e.g. Formula to pull year from a date from Cell S84:  `=YEAR(S84)`.  Date in Cell S84 is 4/22/2015 and the number pulled into the new cell is 2015.
 
 * The Kickstarter crowdfunding data was organized by a pivot table in order to count the number of each type of outcome (successful, failed and cancelled) by month.  Pivot Table Fields were populated as follows:  "Outcomes" was placed in "Columns"; "Date Created Conversion" (i.e. Launch Date) was place in "Rows"; "Outcomes" was placed in "Sum Values"; "Parent Category" was placed in "Filters"; "Years" was placed in "Filters" underneath "Parent Category".  For Louise's purposes, only Theater campaigns were relevant, and therefore, the Parent Category was filtered to Theater but all years of the data were included in the final data set.
 
@@ -49,10 +43,8 @@ For this analysis, a table was constructed on a separate worksheet in which each
 
 * The *COUNTIFS* function was used to determine for each goal range, the number of Kickstarter crowdfunding campaigns that had a particular outcome:  Successful, Failed Cancelled.  Since Louise was only interested in the outcomes of plays, only outcomes for "plays" were counted.
 
-> >Formula to count "Number Successful" campaigns for plays in the goal range of $5000 to $9999: =COUNTIFS(outcomes,"successful",goal,">=5000",goal,"<10000",Subcategory,"plays"), where outcomes=Kickstarter!$F:$F; goal=Kickstarter!$D:$D; Subcategory=Kickstarter!$R:$R.  "outcomes", "goal", "Subcategory" formulas were created in the Name Manager.
-> >
-> >e.g.  Number of Successful Play Campaigns, $5000-$9999 =COUNTIFS(outcomes,"successful",goal,">=5000",goal,"<10000",Subcategory,"plays") = 93
-> >
+> >Formula to count "Number Successful" campaigns for plays in the goal range of $5000 to $9999: `=COUNTIFS(outcomes,"successful",goal,">=5000",goal,"<10000",Subcategory,"plays")`, where "outcomes": `=Kickstarter!$F:$F`; "goal": `=Kickstarter!$D:$D`; "Subcategory": `=Kickstarter!$R:$R`.  "outcomes", "goal", "Subcategory" formulas were created in the Name Manager.
+
 * Total Projects was the summation of the Number Successful, Number Failed, Number Cancelled for each goal range.
 
 * Percentage Successful was calculated by dividing Number Successful by Total Projects for each goal range.  The number format for the percentage columns was set on percentage which multiplies the cell value by 100 and displays the result with a percentage symbol.  The procedure was repeated to determine Percentage Failed and Percentage Cancelled. 

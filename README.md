@@ -69,21 +69,37 @@ For this analysis, a table was constructed on a separate worksheet in which each
 
 * There is a side issue related to the "Years" filter that doesn't directly affect the results of the analysis above but was a cause of personal frustration.  I couldn't find any help in Excel help nor Google search to resolve it, and wonder if it could be a glitch.  The "Years" filter on the pivot table only showed years 2014 through 2016 as options.  In addition, when "Years" was filtered on any particular year, "successful" dropped out, except when "blanks" or "all" was selected.  I went back to the original data set and filtered "Parent Category" to "theater" and filtered "outcomes" to "successful", then pulled up the filter list in "Years" column and found that the filter list showed data for years 2010 through 2017.  So why was the "Years" filter on the pivot table limited to only 3 years?  In addition, there were plenty of "successful" outcomes in those 3 years of 2014 through 2016 on the Kickstarter worksheet, so why didn't any "successful" outcomes appear in the pivot table if only one of those years was selected?  I think that the issue was related to the creation of a "Years2" by the pivot table when I populated the "Rows" with "Date Created Conversion."  To have the full filter capability of "Years", I re-created the pivot table with all of the data except for the "Years" column.  Then when I populated the "Rows" with "Date Created Conversion", and "Years" was created automatically and I dragged the newly created "Years" field into the "Filters" area of the pivot table.  
 
-#### Analysis of Outcomes Based on Goal
+#### Analysis of Outcomes Based on Goals
 * The biggest challenge in developing the Analysis of Outcomes Based on Goal was setting up the `COUNTIFS()` statement.  Developing the statement wasn't difficult, but couldn't find an easy way to copy or drag to fill the other cells without further editing.  I did copy paste to fill the cells, but I had to manually go back and update the >= or < values in each cell for the correct ranges.  
 
 ## Results
 
-1. *Theater Outcomes Based on Launch Date* visually shows that May appears to be the best month to launch a successful campaign and December is the worst month to launch a successful campaign.   But, I wondered, "Is that because May is a better month to launch a crowdfunding campaigns than December or are there more successful campaigns launched in May than December because there are more total campaigns launched in May (166 total campaigns) than in December (75 total campaigns)?" (See Results 4a. for further discussion.) 
+### Results of Analysis of Outcomes Based on Launch Date
 
-2. The general trend shows successful campaigns tend to decline as campaign goals increase and that the highest likelihood of a successful crowdfunding campaign occurs when the campaign goal is under $5000.  But there is an anomaly in the data indicating successful campaigns with goals between $35,000 and $45,000.  This anomaly in the data comes from only 6 campaigns out of 1047. (See Results 4b. for further discussion.)
+*Theater Outcomes Based on Launch Date* visually shows that May appears to be the best month to launch a successful campaign and December is the worst month to launch a successful campaign.   But, I wondered, "Is that because May is a better month to launch a crowdfunding campaigns than December or are there more successful campaigns launched in May than December because there are more total campaigns launched in May (166 total campaigns) than in December (75 total campaigns)?" See ![Additional Tables Outcomes Based on Launch Date](https://github.com/rkaysen63/Kickstarter-Challenge/blob/main/README.md#Additional-Tables-Outcomes-Based-on-Launch Date) for further discussion. 
 
-3. Limitations to this dataset is include: a) Kickstarter crowdfunding is one of many other crowdfunding websites thereby limitting the results relevant to Kickstarter crowdfunding only; b) Although this dataset includes over 4000 crowdfunding campaigns, only 25% of them are crowdfunding for plays; 3) The dataset does not include other factors that could impact donations, such as crowd funding during a recession, a pandemic, a presidential election year, by region, by city. 
+### Results of Analysis of Outcomes Based on Goals
 
-4. Additional Tables and/or Graphs:  a) I decided to normalize the data to see if it still supports the conclusions that I drew from *Theater Outcomes Based on Launch Date*.  To normalize the data, I created a new table by copying the values of the pivot table and then converting those values into percentages of total outcomes by month and then graphed the result. My conclusion was the same:  May tends to be the best month to launch a campaign and December is the worst month to do so.  
+The general trend of the analysis of *Outcomes Based on Goals* shows successful campaigns tend to decline as campaign goals increase and that the highest likelihood of a successful crowdfunding campaign occurs when the campaign goal is under $5000.  But there is an anomaly in the data indicating successful campaigns with goals between $35,000 and $45,000.  This anomaly in the data comes from only 6 campaigns out of 1047. See ![Additional Tables Outcomes Based on Goals](https://github.com/rkaysen63/Kickstarter-Challenge/blob/main/README.md#Additional-Tables-Outcomes-Based-on-Goals) for further discussion. 
 
-    ![alt text](Resources/Theater_Percent_Outcomes_vs_Launch.png)
-    
-    b) It appears that there are some outliers causing the anomaly in the general trend toward the decline of successful campaigns as fundraising goals increase.  It would have been beneficial to first create a box and whiskers chart to identify the outliers and then remove the outliers from the dataset before generating the table and chart for *Outcomes Based on Goals*.
+### Limitations to this dataset is include: 
+
+* Kickstarter crowdfunding is one of many other crowdfunding websites thereby limitting the results relevant to Kickstarter crowdfunding only; 
+
+* Only 25% of dataset is crowdfunding for plays; 
+
+* The dataset does not include other factors that could impact donations, such as crowd funding during a recession, a pandemic, a presidential election year, by region, by city. 
+
+### Additional Tables and/or Graphs:  
+
+#### Additional Tables Outcomes Based on Launch Date
+
+I decided to normalize the data to see if it still supports the conclusions that I drew from *Theater Outcomes Based on Launch Date*.  To normalize the data, I created a new table by copying the values of the pivot table and then converting those values into percentages of total outcomes by month and then graphed the result. My conclusion was the same:  May tends to be the best month to launch a campaign and December is the worst month to do so.
+
+![alt text](Resources/Theater_Percent_Outcomes_vs_Launch.png)
+
+#### Additional Tables Outcomes Based on Goals
+
+It appears that there are some outliers causing the anomaly in the general trend toward the decline of successful campaigns as fundraising goals increase.  It would have been beneficial to first create a box and whiskers chart to identify the outliers and then remove the outliers from the dataset before generating the table and chart for *Outcomes Based on Goals*.
 
 Return to [Table of Contents](https://github.com/rkaysen63/Kickstarter-Challenge/blob/main/README.md#table-of-contents)

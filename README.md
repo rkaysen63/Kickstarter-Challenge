@@ -24,7 +24,8 @@ This project intends to analyze the relationships described above and identify t
 
 * In order to analyze outcomes based on launch date, the Unix timestamp data had to be converted into a readable day-month-year format.  UNIX timestamps in seconds were converted into days (60 secs/min, 60 secs/hour, 24 hours/day) and added to the date 1 January 1970 using Excel's *DATE* function.  (Bootcamp Module 1,3.3)
 
-> >Formula for launch date conversion:  =(((*CELL W UNIX DATE STAMP*/60)/60)/24)+DATE(1970,1,1)
+> >Formula for launch date conversion:  
+> >`=(((*CELL W UNIX DATE STAMP*/60)/60)/24)+DATE(1970,1,1)`
 
 > >e.g. Timestamp in CELL J84 is 1429722209. 
 
@@ -69,19 +70,19 @@ For this analysis, a table was constructed on a separate worksheet in which each
 * 
 * My second difficulty was to find where to sort the table columns in descending order.  Although I had filtered "Column Labels" to remove "live" I did not see the sorting feature.  I reached out to a classmate for help and he pointed me back to the filter button to find the sort options.
 
-* There is a side issue related to the "Years" filter that doesn't directly affect the results of the analysis above but is a cause of personal frustration.  I couldn't find any help in Excel nor Google search to resolve it either and wonder if it is a glitch.  The "Years" filter on the pivot table only shows years 2014 through 2016 as options and when "Years" is filtered on any particular year, "successful" drops out, except when "blanks" or "all" is selected.  I went back to the original data set and filtered "Parent Category" to "theater" and filtered "outcomes" to "successful", pulled up filter list for "Years" column and found that the filter list showed data for years 2010 through 2017.  But   Furthermore, there are plenty of "successful" outcomes in years 2014 through 2016, so a graph for "successful" should appear if any one of those years is selected.
+* There is a side issue related to the "Years" filter that doesn't directly affect the results of the analysis above but is a cause of personal frustration.  I couldn't find any help in Excel nor Google search to resolve it, and wonder if it could be a glitch.  The "Years" filter on the pivot table only shows years 2014 through 2016 as options and when "Years" is filtered on any particular year, "successful" drops out, except when "blanks" or "all" is selected.  I went back to the original data set and filtered "Parent Category" to "theater" and filtered "outcomes" to "successful", pulled up filter list for "Years" column and found that the filter list showed data for years 2010 through 2017.  So why is the "Years" filter on the pivot table limited to only 3 years?  In addition, there are plenty of "successful" outcomes in those 3 years of 2014 through 2016, so why don't any "successful" outcomes appear in the table if only one of those years is selected?
 
 #### Analysis of Outcomes Based on Goal
 * The biggest challenge in developing the Analysis of Outcomes Based on Goal was setting up the *COUNTIFS* statement.  It was eventually accomplished through trial and error and through Google search for "Excel Countifs."
 
 ## Results
 
-- What are two conclusions you can draw about the Outcomes based on Launch Date?  May appears to be the best month to launch a successful campaign and December is the worst month to launch a successful campaign.   However, is that because May is a better month to launch a crowdfunding campaign than December or are there more successful campaigns launched in May than December because there are more total campaigns launched in May than in December?  
+1. *Theater Outcomes Based on Launch Date* visually shows that May appears to be the best month to launch a successful campaign and December is the worst month to launch a successful campaign.   However, is that because May is a better month to launch a crowdfunding campaign than December or are there more successful campaigns launched in May than December because there are more total campaigns launched in May than in December?  
 
-- What can you conclude about the Outcomes based on Goals?  Best chance for a successful campaign to keep goal under $5000.
+2. There is no clear insight to be gathered from *Outcomes based on Goals*, at least without any modifications to remove outliers. Generally, it appears that there is an higher likelihood of successful campaigns if the campaign goals are kept under $5000 because the general trend is for the successful of campaigns to decline as campaign goals increase.  The successful campaigns with goals between $35,000a and $45,000 throw off this general trend. In addition, Louise was interested in crowdfunding for plays and ther
 
-- What are some limitations of this dataset?  Only Kickstarter crowdfunding and there are other 
+3. This dataset is limited to Kickstarter crowdfunding campaigns and there are a number of other crowdfunding websites.  Although this dataset includes over 4000 crowdfunding campaigns, only 25% of them are crowdfunding for plays.  The dataset is also might be more useful if it could identify type of plays, such as dramas or comedies in order to determine if one type fares better than another.
 
-- What are some other possible tables and/or graphs that we could create?
+4. What are some other possible tables and/or graphs that we could create?  *Theater Outcomes Based on Launch Date* may require additional analysis to answer the question, "Is May a better month to launch a crowdfunding campaign than December because there are there more successful campaigns launched in May than December or because there are more total campaigns launched in May than in December?  One method to determine the answer to that question is to create a table that shows the percentage of each campaign outcome by month instead of the number of campaign outcomes by month and then set up the pivot table based on the percentages.  That would level the playing field.  When doing so, .  
 
 * [Table of Contents](https://github.com/rkaysen63/Kickstarter-Challenge/blob/main/README.md#table-of-contents)

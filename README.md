@@ -48,7 +48,12 @@ For this analysis, a table was constructed in which the rows were labeled dollar
 
 > >Formula to count successful outcomes of the campaigns for plays in the goal range of $5000 to $9999: =COUNTIFS(outcomes,"successful",goal,">=5000",goal,"<10000",Subcategory,"plays"), where outcomes=Kickstarter!$F:$F; goal=Kickstarter!$D:$D; Subcategory=Kickstarter!$R:$R.
 > >
-> > E.G. 
+> >e.g.  Number of Successful Play Campaigns, $5000-$9999 =COUNTIFS(outcomes,"successful",goal,">=5000",goal,"<10000",Subcategory,"plays") = 93
+> >
+* Total Projects is the sum of the Number Successful, Number Failed, Number Cancelled for each goal range.
+
+* Percentage Successful can be determined by dividing Number Successful/Total Projects for each goal range.  The number format for the column was set on percentage which multiplies the cell value by 100 and displays the result with a percentage symbol.  The same procedure was used to determine Percentage Failed and Percentage Cancelled. 
+* A chart was create to visualize the Outcomes Based on Goal where the horizontal axis are goal ranges and the vertical axis are percentages.  Percentage Successful, Percentage Failed and Percentage Cancelled vs Goal plotted on the chart.   
 
 ![alt text](Resources/Outcomes_vs_Goals.png)
 
@@ -66,3 +71,5 @@ For this analysis, a table was constructed in which the rows were labeled dollar
 - What are some limitations of this dataset?
 
 - What are some other possible tables and/or graphs that we could create?
+
+* [Table of Contents](https://github.com/rkaysen63/Kickstarter-Challenge/blob/main/README.md#table-of-contents)

@@ -50,10 +50,11 @@ For this analysis, a table was constructed in which the rows were labeled dollar
 > >
 > >e.g.  Number of Successful Play Campaigns, $5000-$9999 =COUNTIFS(outcomes,"successful",goal,">=5000",goal,"<10000",Subcategory,"plays") = 93
 > >
-* Total Projects is the sum of the Number Successful, Number Failed, Number Cancelled for each goal range.
+* Total Projects was the summation of the Number Successful, Number Failed, Number Cancelled for each goal range.
 
-* Percentage Successful can be determined by dividing Number Successful/Total Projects for each goal range.  The number format for the column was set on percentage which multiplies the cell value by 100 and displays the result with a percentage symbol.  The same procedure was used to determine Percentage Failed and Percentage Cancelled. 
-* A chart was create to visualize the Outcomes Based on Goal where the horizontal axis are goal ranges and the vertical axis are percentages.  Percentage Successful, Percentage Failed and Percentage Cancelled vs Goal plotted on the chart.   
+* Percentage Successful was calculated by dividing Number Successful/Total Projects for each goal range.  The number format for the column was set on percentage which multiplies the cell value by 100 and displays the result with a percentage symbol.  The same procedure was used to determine Percentage Failed and Percentage Cancelled. 
+
+* A chart was created to visualize the Outcomes Based on Goal where the horizontal axis are goal ranges and the vertical axis are percentages.  Percentage Successful, Percentage Failed and Percentage Cancelled for each Goal are plotted on the chart.   
 
 ![alt text](Resources/Outcomes_vs_Goals.png)
 
@@ -61,6 +62,8 @@ For this analysis, a table was constructed in which the rows were labeled dollar
 ### Challenges and Difficulties Encountered
 
 * The challenges in developing the Analysis of Outcomes Based on Launch Date includes the automatic filtering of quarters and years when I placed the "Date Created Conversion" into the rows and sorting the pivot table columns in descending order.  Both issues were resolved by trial and error until I achieved the desired result.  
+
+* The biggest challenge in developing the Analysis of Outcomes Base on Goal was setting up the *COUNTIFS* statement.  It was eventually accomplished through trial and error and through Google search for "Excel Countifs."
 
 ## Results
 

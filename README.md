@@ -1,5 +1,7 @@
 # Kickstarting with Excel
 
+![alt text](Resources/Kickstarter_Challenge.png)
+
 ## Table of Contents
 * [Overview of Project](https://github.com/rkaysen63/Kickstarter-Challenge/blob/main/README.md#overview-of-project)
 * [Analysis and Challenges](https://github.com/rkaysen63/Kickstarter-Challenge/blob/main/README.md#analysis-and-challenges)
@@ -31,14 +33,14 @@ This project intends to analyze the relationships described above and identify t
 
 * For the purpose of sorting by year, an additional column was created to pull just the year from the launch date by using Excel's `YEAR()` function.
 
-> >Formula to pull year from a date from a cell:
+> >Formula to pull the year from a date in one cell into a new cell:
 > >`=YEAR(*CELL W DATE*)`.  
 > >
 > >e.g. if the referenced CELL S84 has the date 4/22/2015, the new cell's formula will be `=YEAR(S84)` and the new cell will display 2015.
 
 * The Kickstarter crowdfunding data was organized by a pivot table in order to count the number of each type of outcome (successful, failed and cancelled) by month.  Pivot Table Fields were populated as follows:  "Outcomes" was placed in "Columns"; "Date Created Conversion" (i.e. Launch Date) was place in "Rows"; "Outcomes" was placed in "Sum Values"; "Parent Category" was placed in "Filters"; "Years" was placed in "Filters" underneath "Parent Category".  For Louise's purposes, only Theater campaigns were relevant, and therefore, the Parent Category was filtered to Theater but all years of the data were included in the final data set.
 
-* ![alt text](Resources/Theater_Outcomes_vs_Launch.png)
+    ![alt text](Resources/Theater_Outcomes_vs_Launch.png)
 
 ### Analysis of Outcomes Based on Goals
 
@@ -54,7 +56,7 @@ For this analysis, a table was constructed on a separate worksheet in which each
 
 * A chart was created to visualize the Outcomes Based on Goal where the horizontal axis represents goal ranges and the vertical axis represents percentages.  Percentage Successful, Percentage Failed and Percentage Cancelled for each Goal Range are plotted on the chart.   
 
-![alt text](Resources/Outcomes_vs_Goals.png)
+    ![alt text](Resources/Outcomes_vs_Goals.png)
 
 
 ### Challenges and Difficulties Encountered
@@ -65,19 +67,23 @@ For this analysis, a table was constructed on a separate worksheet in which each
 
 * I had a difficulty locating where to sort the table columns in descending order.  Although I had filtered "Column Labels" to remove "live" I did not see the sorting feature.  I reached out to a classmate for help and he pointed me back to the filter button to find the sort options.
 
-* There is a side issue related to the "Years" filter that doesn't directly affect the results of the analysis above but was a cause of personal frustration.  I couldn't find any help in Excel help nor Google search to resolve it, and wonder if it could be a glitch.  The "Years" filter on the pivot table only showed years 2014 through 2016 as options and when "Years" was filtered on any particular year, "successful" dropped out, except when "blanks" or "all" was selected.  I went back to the original data set and filtered "Parent Category" to "theater" and filtered "outcomes" to "successful", then pulled up the filter list in "Years" column and found that the filter list showed data for years 2010 through 2017.  So why was the "Years" filter on the pivot table limited to only 3 years?  In addition, there were plenty of "successful" outcomes in those 3 years of 2014 through 2016, so why didn't any "successful" outcomes appear in the pivot table if only one of those years was selected?  I think that the issue was related to the creation of a "Years2" by the pivot table when I populated the "Rows" with "Date Created Conversion."  To have the full filter capability of "Years", I re-created the pivot table with all of the data except for the "Years" column.  Then when I populated the "Rows" with "Date Created Conversion", and "Years" was created automatically and I dragged the newly created "Years" field into the "Filters" area of the pivot table.  
+* There is a side issue related to the "Years" filter that doesn't directly affect the results of the analysis above but was a cause of personal frustration.  I couldn't find any help in Excel help nor Google search to resolve it, and wonder if it could be a glitch.  The "Years" filter on the pivot table only showed years 2014 through 2016 as options.  In addition, when "Years" was filtered on any particular year, "successful" dropped out, except when "blanks" or "all" was selected.  I went back to the original data set and filtered "Parent Category" to "theater" and filtered "outcomes" to "successful", then pulled up the filter list in "Years" column and found that the filter list showed data for years 2010 through 2017.  So why was the "Years" filter on the pivot table limited to only 3 years?  In addition, there were plenty of "successful" outcomes in those 3 years of 2014 through 2016 on the Kickstarter worksheet, so why didn't any "successful" outcomes appear in the pivot table if only one of those years was selected?  I think that the issue was related to the creation of a "Years2" by the pivot table when I populated the "Rows" with "Date Created Conversion."  To have the full filter capability of "Years", I re-created the pivot table with all of the data except for the "Years" column.  Then when I populated the "Rows" with "Date Created Conversion", and "Years" was created automatically and I dragged the newly created "Years" field into the "Filters" area of the pivot table.  
 
 #### Analysis of Outcomes Based on Goal
 * The biggest challenge in developing the Analysis of Outcomes Based on Goal was setting up the `COUNTIFS()` statement.  Developing the statement wasn't difficult, but couldn't find an easy way to copy or drag to fill the other cells without further editing.  I did copy paste to fill the cells, but I had to manually go back and update the >= or < values in each cell for the correct ranges.  
 
 ## Results
 
-1. *Theater Outcomes Based on Launch Date* visually shows that May appears to be the best month to launch a successful campaign and December is the worst month to launch a successful campaign.   However, is that because May is a better month to launch a crowdfunding campaign than December or are there more successful campaigns launched in May than December because there are more total campaigns launched in May (166 total campaigns) than in December (75 total campaigns)? (See Results 4. for further discussion.) 
+1. *Theater Outcomes Based on Launch Date* visually shows that May appears to be the best month to launch a successful campaign and December is the worst month to launch a successful campaign.   But, I wondered, "Is that because May is a better month to launch a crowdfunding campaigns than December or are there more successful campaigns launched in May than December because there are more total campaigns launched in May (166 total campaigns) than in December (75 total campaigns)?" (See Results 4a. for further discussion.) 
 
-2. There is no clear insight to be gathered from *Outcomes Based on Goals*, at least without any modification to remove outliers. The general trend shows successful campaigns tend to decline as campaign goals increase and that the highest likelihood of a successful crowdfunding campaign occurs when the campaign goals are kept under $5000.  The successful campaigns with goals between $35,000 and $45,000 throw off this general trend.  This anomaly in the data comes from 6 campaigns out of 1047.
+2. The general trend shows successful campaigns tend to decline as campaign goals increase and that the highest likelihood of a successful crowdfunding campaign occurs when the campaign goal is under $5000.  But there is an anomaly in the data indicating successful campaigns with goals between $35,000 and $45,000.  This anomaly in the data comes from only 6 campaigns out of 1047. (See Results 4b. for further discussion.)
 
 3. Limitations to this dataset is include: a) Kickstarter crowdfunding is one of many other crowdfunding websites thereby limitting the results relevant to Kickstarter crowdfunding only; b) Although this dataset includes over 4000 crowdfunding campaigns, only 25% of them are crowdfunding for plays; 3) The dataset does not include other factors that could impact donations, such as crowd funding during a recession, a pandemic, a presidential election year, by region, by city. 
 
-4. Additional Tables and/or Graphs:  a) Normalize data for *Theater Outcomes Based on Launch Date* to answer the question, "Is May a better month to launch a crowdfunding campaign than December because there are there more successful campaigns launched in May than December or because there are more total campaigns launched in May than in December?  To normalize the data, I created a new table that copied the values of the pivot table and then converted those values into percentages of total outcomes by month and graphed the result. The result was the same, where May tends to be the best month to launch a campaign and December is the worst month to do so.  b) For the *Outcomes Based on Goals* Analysis it would have been beneficial to first create a box chart to identify the outliers and then remove the outliers from the dataset in order to generate the table for *Outcomes Based on Goals*.
+4. Additional Tables and/or Graphs:  a) I decided to normalize the data to see if it still supports the conclusions that I drew from *Theater Outcomes Based on Launch Date*.  To normalize the data, I created a new table by copying the values of the pivot table and then converting those values into percentages of total outcomes by month and then graphed the result. My conclusion was the same:  May tends to be the best month to launch a campaign and December is the worst month to do so.  
+
+    ![alt text](Resources/Theater_Percent_Outcomes_vs_Launch.png)
+
+ b) It appears that there are some outliers causing the anomaly in the general trend toward the decline of successful campaigns as fundraising goals increase.  It would have been beneficial to first create a box and whiskers chart to identify the outliers and then remove the outliers from the dataset before generating the table and chart for *Outcomes Based on Goals*.
 
 Return to [Table of Contents](https://github.com/rkaysen63/Kickstarter-Challenge/blob/main/README.md#table-of-contents)

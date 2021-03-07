@@ -7,13 +7,15 @@
 
 ## Overview of Project
 
-Previously, Louise, a playwright, had sought help with analyzing a large number Kickstarter crowdfunding campaigns in order to determine the viability of her own crowdfunding campaign for a play that she wrote.  For her play, ***Fever***, she budgeted $10,000 and planned to open it in the U.S.  (https://github.com/rkaysen63/kickstarter-analysis)
+Previously, Louise, a playwright, had sought help with analyzing a large number of Kickstarter crowdfunding campaigns in order to determine the viability of her own crowdfunding campaign for a play that she wrote.  For her play, ***Fever***, she budgeted $10,000 and planned to open it in the U.S.  (https://github.com/rkaysen63/kickstarter-analysis)
 
-In a short period of time, Louise's crowdfunding campaign for her play, ***Fever***, came close to its fundraising  goal and now she's interested the relationship between crowdfunding campaign outcomes and their launch dates and campaign outcomes and their fundraising goals. (Premise from Bootcamp Module 1 Challenge.  Kickstarter Data downloaded from Bootcamp Module 1.1.3)
+In a short period of time, Louise's crowdfunding campaign for her play, ***Fever***, came close to its fundraising  goal and now she's interested in: 
+* The relationship between crowdfunding campaign outcomes and their launch dates and 
+* The relationship between crowdfunding campaign outcomes and their fundraising goals. (Premise from Bootcamp Module 1 Challenge.  Kickstarter Data downloaded from Bootcamp Module 1.1.3)
 
 ### Purpose
 
-The purpose of this analysis is to determine if there are relationships between Kickstarter crowdfunding campaign outcomes and their launch dates and campaign outcomes and their fundraising goals and to see what these relationships might reveal.  Excel and its functions and features were used to organize, convert and display the data in order to help visualize the results.  
+This project intends to analyze the relationships described above and identify trends in order to improve future crowdfunding efforts.  Excel and its functions and features were used to organize, convert and display the data in order to help visualize the results.  
 
 
 ## Analysis and Challenges
@@ -40,9 +42,9 @@ The purpose of this analysis is to determine if there are relationships between 
 
 ### Analysis of Outcomes Based on Goals
 
-For this analysis, a table was constructed in which the rows were dollar-amount ranges of fundraising goals, e.g. "Less than $1000," "$1000 to $4999", $5000 to $9999, etc.  The columns were labeled, "Number of Successful", "Number of Failed", "Number of Cancelled", "Total Projects", "Pecentage Successful", Percentage Failed", "Percentage Cancelled." 
+For this analysis, a table was constructed in which the rows were labeled dollar-amount fundraising goal ranges, "Less than $1000," "$1000 to $4999", $5000 to $9999, etc. and the columns were labeled, "Number of Successful", "Number of Failed", "Number of Cancelled", "Total Projects", "Pecentage Successful", Percentage Failed", "Percentage Cancelled." 
 
-* The *COUNTIFS* function was used to determine for each dollar-amount goal range, the number campaigns of a particular outcome (successful, failed, cancelled).  Since Louise was only interested in the outcomes of plays, "plays" were figured into the formula.
+* The *COUNTIFS* function was used to determine for each goal range, the number campaigns of a particular outcome (successful, failed, cancelled).  Since Louise was only interested in the outcomes of plays, only outcomes for "plays" were counted.
 
 > >Formula to count successful outcomes of the campaigns for plays in the goal range of $5000 to $9999: =COUNTIFS(outcomes,"successful",goal,">=5000",goal,"<10000",Subcategory,"plays"), where outcomes=Kickstarter!$F:$F; goal=Kickstarter!$D:$D; Subcategory=Kickstarter!$R:$R.
 > >
@@ -53,7 +55,7 @@ For this analysis, a table was constructed in which the rows were dollar-amount 
 
 ### Challenges and Difficulties Encountered
 
-* The challenges in developing the Analysis of Outcomes Based on Launch Date include the automatic filtering of quarters and years when I placed the "Date Created Conversion" into the rows and sorting the pivot table columns in descending order.  Both issues were resolved by trial and error until I achieved the desired result.  
+* The challenges in developing the Analysis of Outcomes Based on Launch Date includes the automatic filtering of quarters and years when I placed the "Date Created Conversion" into the rows and sorting the pivot table columns in descending order.  Both issues were resolved by trial and error until I achieved the desired result.  
 
 ## Results
 

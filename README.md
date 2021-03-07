@@ -20,9 +20,23 @@ The purpose of this analysis is to determine if there are relationships between 
 
 ### Analysis of Outcomes Based on Launch Date
 
-First the data had to be converted into a readable format and before it was organized.  The UNIX time stamps were converted to a readable day-month-year format by a formula that converted the time stamp from seconds into days and that added that time in days to the date 1 January 1970 using Excel's *DATE* function.  For the purpose of sorting by year, an additional column was created to pull just the year from the launch date by using Excel's *YEAR* function.
+* In order to analyze outcomes based on launch date, the Unix timestamp data had to be converted into a readable day-month-year format.  First the UNIX timestamps in seconds were converted into days (60 secs/min, 60 secs/hour, 24 hours/day) and added to the date 1 January 1970 using Excel's *DATE* function.  (Bootcamp Module 1,3.3)
 
-The Kickstarter crowdfunding data was organized by a pivot table in order to count number of each type of outcome (successful, failed and cancelled) by month.  The table was set up to filter Parent Category and Years.  For Louise's purposes, only Theater campaigns were relevant, and therefore, the Parent Category was filtered to Theater but all years of the data were included in the final data set. ![alt text](Resources/Theater_Outcomes_vs_Launch.png)
+> >Formula for launch date conversion:  =(((*CELL W UNIX DATE STAMP*/60)/60)/24)+DATE(1970,1,1)
+> >
+> >e.g. 
+> >Timestamp in cell J84 is 1429722209.  
+> >Date =(((J84/60)/60)/24)+DATE(1970,1,1) = 4/22/2015
+
+* For the purpose of sorting by year, an additional column was created to pull just the year from the launch date by using Excel's *YEAR* function.
+
+> >Formula to pull years:  Year =YEAR(*CELL W LAUNCH DATE IN DAY-MONTH-YEAR FORMAT*)
+> >
+> >e.g.
+> >Date in cell S84 is 4/22/2015.
+> >Year =YEAR(S84) = 2015
+
+* The Kickstarter crowdfunding data was organized by a pivot table in order to count the number of each type of outcome (successful, failed and cancelled) by month.  The table was set up to filter Parent Category and Years.  For Louise's purposes, only Theater campaigns were relevant, and therefore, the Parent Category was filtered to Theater but all years of the data were included in the final data set. ![alt text](Resources/Theater_Outcomes_vs_Launch.png)
 
 ### Analysis of Outcomes Based on Goals
 
@@ -32,6 +46,8 @@ For this analysis, dollar-amount ranges were set up for the fundraising goals, e
 
 
 ### Challenges and Difficulties Encountered
+
+* The challenges in developing the Analysis of Outcomes Based on Launch Date include the automatic filtering of quarters and years when I placed the "Date Created Conversion" into the rows and sorting the pivot table columns in descending order.  Both issues were resolved by trial and error until I achieved the desired result.  
 
 ## Results
 

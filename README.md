@@ -83,7 +83,7 @@ For this analysis, a table was constructed on a separate worksheet in which each
 4. Additional Tables and/or Graphs:  a) I decided to normalize the data to see if it still supports the conclusions that I drew from *Theater Outcomes Based on Launch Date*.  To normalize the data, I created a new table by copying the values of the pivot table and then converting those values into percentages of total outcomes by month and then graphed the result. My conclusion was the same:  May tends to be the best month to launch a campaign and December is the worst month to do so.  
 
     ![alt text](Resources/Theater_Percent_Outcomes_vs_Launch.png)
-
- b) It appears that there are some outliers causing the anomaly in the general trend toward the decline of successful campaigns as fundraising goals increase.  It would have been beneficial to first create a box and whiskers chart to identify the outliers and then remove the outliers from the dataset before generating the table and chart for *Outcomes Based on Goals*.
+    
+    b) It appears that there are some outliers causing the anomaly in the general trend toward the decline of successful campaigns as fundraising goals increase.  It would have been beneficial to first create a box and whiskers chart to identify the outliers and then remove the outliers from the dataset before generating the table and chart for *Outcomes Based on Goals*.
 
 Return to [Table of Contents](https://github.com/rkaysen63/Kickstarter-Challenge/blob/main/README.md#table-of-contents)
